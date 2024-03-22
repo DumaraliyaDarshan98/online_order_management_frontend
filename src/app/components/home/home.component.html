@@ -1,0 +1,66 @@
+<div>
+  <app-header></app-header>
+
+<!-- food section -->
+<section class="food_section layout_padding-bottom">
+  <div class="container">
+    <div class="heading_container heading_center">
+      <h2>Our Menu</h2>
+    </div>
+    <div class="filters-content">
+      <div class="row grid">
+        <ng-container *ngFor="let menu of menuList">
+          <div class="col-sm-6 col-lg-4 all pizza">
+            <div class="box">
+              <div>
+                <div>
+                  <!-- <img src="../../../assets/images/pizza.jpg" alt="" style="width: 400px; height: 400px;"/> -->
+                  <img [src]="menu?.image" alt="" style="width: 400px; height: 400px;"/>
+                </div>
+                <div class="detail-box">
+                  <h5>{{menu?.name}}</h5>
+                  <p>
+                    {{menu?.description}}
+                  </p>
+                  <div class="options">
+                    <h6>Rs. {{menu?.price}}</h6>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </ng-container>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- end food section -->
+
+<!-- about section -->
+<section class="about_section layout_padding" style="padding: 20px 0px;">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="img-box">
+          <img src="../../../assets/images/pizza.jpg" alt="" />
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="detail-box">
+          <div class="heading_container">
+            <h2>Pizza</h2>
+          </div>
+          <p>
+            pizza, dish of Italian origin consisting of a flattened disk of bread dough topped with some combination of olive oil, oregano, tomato, olives, mozzarella or other cheese, and many other ingredients, baked quickly—usually, in a commercial setting, using a wood-fired oven heated to a very high temperature—and served hot ...
+          </p>
+          <!-- <a href=""> Read More </a> -->
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- end about section -->
+
+<!-- footer section -->
+<app-footer></app-footer>
+</div>

@@ -1,0 +1,22 @@
+<div class="add-item">
+  <h2 style="font-family: sans-serif;">Add Menu Item</h2>
+  <form>
+    <div class="form-group">
+      <label for="title">Title:</label>
+      <input type="text" id="title" name="title" required  [formControl]="title">
+    </div>
+    <div class="form-group">
+      <label for="price">Price:</label>
+      <input type="number" id="price" name="price" required  [formControl]="price">
+    </div>
+    <div class="form-group">
+      <label for="description">Description:</label>
+      <textarea id="description" name="description"required [formControl]="description"></textarea>
+    </div>
+    <div class="form-group">
+      <label for="image">Image:</label>
+      <input type="file" id="image" name="image" accept="image/*" required (change)="onFileChange($event)">
+    </div>
+    <button type="button" (click)="addItem()">Add Item</button>
+  </form>
+</div>

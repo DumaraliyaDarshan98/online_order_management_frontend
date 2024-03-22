@@ -1,0 +1,29 @@
+.user-list {
+  padding: 5px;
+}
+
+h2 {
+  margin-bottom: 20px;
+  font-family: sans-serif;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+thead th {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  text-align: left;
+}
+
+tbody td {
+  border-bottom: 1px solid #ccc;
+  padding: 10px;
+}
+
+tbody tr:last-child td {
+  border-bottom: none;
+}

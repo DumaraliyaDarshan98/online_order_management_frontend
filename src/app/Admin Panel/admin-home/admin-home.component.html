@@ -1,0 +1,27 @@
+<div class="header">
+  <div class="logo">
+    <!-- <img src="path/to/logo.png" alt="Logo"> -->
+    <span style="font-family: sans-serif;"> CafeLuxe </span>
+  </div>
+  <div class="logout">
+    <button routerLink="/home">Logout</button>
+  </div>
+</div>
+<div class="container">
+  <div class="sidebar">
+    <div class="logo">
+      <img src="./../../../assets/images/logo.png" alt="Logo">
+    </div>
+    <ul class="menu">
+      <li><a>Dashboard</a></li>
+      <li><a routerLink="/admin/users">Users</a></li>
+      <li><a routerLink="/admin/items">Menu Item</a></li>
+      <!-- Add more menu items as needed -->
+    </ul>
+  </div>
+
+  <div class="content">
+    <!-- <h1>Hello</h1> -->
+    <router-outlet></router-outlet> <!-- This is where the routed components will be displayed -->
+  </div>
+</div>

@@ -1,0 +1,23 @@
+<div class="login-container">
+  <div class="login-form">
+    <h2 style="font-family: sans-serif;">Admin Login</h2>
+    <form>
+      <div class="form-group">
+        <label for="username">Email</label>
+        <input type="email" id="username" name="username" class="form-control" placeholder="Enter your username" required [formControl]="email">
+      </div>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" class="form-control" placeholder="Enter your password" required [formControl]="password">
+      </div>
+      <div class="form-group">
+        <button type="button" class="btn btn-secondary" style="margin-right: 90px">Cancel</button>
+        <button type="button" class="btn btn-primary" (click)="submit()">Login</button>
+      </div>
+    </form>
+    <!-- <div class="additional-links">
+      <a routerLink="/register">Register</a> |
+      <a routerLink="/forgot-password">Forgot Password?</a>
+    </div> -->
+  </div>
+</div>
