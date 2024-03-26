@@ -4,7 +4,7 @@
     <span style="font-family: sans-serif;"> CafeLuxe </span>
   </div>
   <div class="logout">
-    <button routerLink="/home">Logout</button>
+    <button routerLink="/home" (click)="logOut()">Logout</button>
   </div>
 </div>
 <div class="container">
@@ -13,9 +13,10 @@
       <img src="./../../../assets/images/logo.png" alt="Logo">
     </div>
     <ul class="menu">
-      <li><a>Dashboard</a></li>
+      <li><a routerLink="/admin/dashboard">Dashboard</a></li>
       <li><a routerLink="/admin/users">Users</a></li>
       <li><a routerLink="/admin/items">Menu Item</a></li>
+      <li><a routerLink="/admin/orders">Orders List</a></li>
       <!-- Add more menu items as needed -->
     </ul>
   </div>

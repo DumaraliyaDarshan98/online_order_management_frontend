@@ -49,7 +49,7 @@
 <body>
   <ng-container *ngFor="let item of menuList">
     <div *ngIf="item?.status !== 4" class="menu-item">
-      <img [src]="item?.items[0]?.item_detail?.image" alt="" alt="menu Image" />
+      <img [src]="'http://localhost/online_order_management_backend/uploads/' + item?.items[0]?.item_detail?.image" alt="" alt="menu Image" />
       <div class="info">
         <div>
           <h2 class="title">{{ item?.items[0]?.item_detail?.name }}</h2>

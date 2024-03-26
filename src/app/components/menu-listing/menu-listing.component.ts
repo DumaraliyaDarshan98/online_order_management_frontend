@@ -50,7 +50,8 @@ export class MenuListingComponent implements OnInit {
       ]
     }
     this.service.createOrder(payload).subscribe((response) => {
-      if(response?.status) {
+      console.log('response', response)
+      if(response?.status == 1) {
         this.router.navigateByUrl('/order');
       }
     })

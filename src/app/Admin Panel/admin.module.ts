@@ -8,6 +8,8 @@ import { CreateItemComponent } from './create-item/create-item.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { EditItemComponent } from './edit-item/edit-item.component';
 import { AdminLoginComponent } from './admin-login/admin-login.component';
+import { OrderListComponent } from './order-list/order-list.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 const routes: Routes = [
   {
@@ -35,8 +37,16 @@ const routes: Routes = [
       component : EditItemComponent
     },
     {
+      path:'orders',
+      component : OrderListComponent
+    },
+    {
+      path:'dashboard',
+      component : DashboardComponent
+    },
+    {
       path:'**',
-      redirectTo : "users"
+      redirectTo : "dashboard"
     }
    ]
   },
@@ -49,7 +59,9 @@ const routes: Routes = [
     ItemListComponent,
     CreateItemComponent,
     EditItemComponent,
-    AdminLoginComponent
+    AdminLoginComponent,
+    OrderListComponent,
+    DashboardComponent
   ],
   imports: [
     CommonModule,

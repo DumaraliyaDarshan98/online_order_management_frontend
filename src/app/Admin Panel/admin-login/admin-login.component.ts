@@ -28,12 +28,10 @@ export class AdminLoginComponent {
       email: this.email.value,
       password: this.password.value
     }
-    console.log('payload', payload);
     this.service.adminLogin(payload).subscribe((response) => {
-
       if (response?.status) {
-        this.router.navigateByUrl('/admin/users')
-        localStorage.setItem('loginUser', JSON.stringify(response))
+        this.router.navigateByUrl('/admin/dashboard')
+        localStorage.setItem('loginUser', JSON.stringify(response?.data))
       } else {
         this.router.navigateByUrl('/home')
       }

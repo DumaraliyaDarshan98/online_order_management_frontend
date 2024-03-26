@@ -34,7 +34,7 @@ export class RegisterComponent implements OnInit {
 
     console.log('payload', payload);
     this.service.register(payload).subscribe((response) => {
-      if (response?.status == 200) {
+      if (response?.status) {
         this.router.navigateByUrl('/home')
         localStorage.setItem('loginUser', JSON.stringify(response))
       }
